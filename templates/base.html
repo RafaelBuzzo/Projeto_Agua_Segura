@@ -11,23 +11,33 @@
 
 <body>
 
-    <header>
-        <h1>Água Segura</h1>
-        <hr>
-    </header>
+    <nav>
 
-    <main>
+        <a href="{% url 'home' %}" class="btn-login">Home</a>
 
-        {% block content %}
+        <a href="#" class="btn-login">Sobre</a>
 
-        {% endblock %}
+        <a href="#" class="btn-login">Entrar</a>
 
-    </main>
+    </nav>
 
-    <footer>
-        <hr>
-        <p>Projeto desenvolvido em Django.</p>
-    </footer>
+</header>
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+<footer>
+
+    <p>Água Segura © 2026</p>
+    <p>Projeto acadêmico desenvolvido em Django.</p>
+    <p>Desenvolvido por Rafael Noschang Buzzo</p>
+
+</footer>
 
 </body>
 

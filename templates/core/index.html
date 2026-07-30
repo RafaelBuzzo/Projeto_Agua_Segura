@@ -2,10 +2,62 @@
 
 {% block content %}
 
-<h2>Bem-vindo ao Água Segura</h2>
+<section class="hero">
 
-<p>
-    Sistema de Gestão de Saneamento e Qualidade da Água.
-</p>
+    <h2>💧 Água Segura</h2>
+
+    <h3>
+        Sistema de Gestão de Saneamento
+        e Qualidade da Água
+    </h3>
+
+    <p>
+
+        Tecnologia a serviço da qualidade da água,
+        do saneamento ambiental e da saúde das comunidades.
+
+    </p>
+
+    <a href="#" class="btn-principal">
+
+        Entrar no Sistema
+
+    </a>
+
+</section>
+
+<section class="cards">
+
+    <a href="{% url 'aldeias' %}" class="card">
+        <h3>🏘️ Aldeias</h3>
+        <p>Cadastro das comunidades atendidas.</p>
+    </a>
+
+    <div class="card">
+        <h3>🚰 Sistemas</h3>
+        <p>Controle dos sistemas de abastecimento.</p>
+    </div>
+
+    <div class="card">
+        <h3>🧪 Análises</h3>
+        <p>Controle físico-químico e microbiológico.</p>
+    </div>
+
+    <div class="card">
+        <h3>📦 Estoque</h3>
+        <p>Controle de materiais e insumos.</p>
+    </div>
+
+    <div class="card">
+        <h3>🚨 Chamados</h3>
+        <p>Registro e acompanhamento de ocorrências.</p>
+    </div>
+
+    <div class="card">
+        <h3>📄 Relatórios</h3>
+        <p>Emissão de relatórios e indicadores.</p>
+    </div>
+
+</section>
 
 {% endblock %}
