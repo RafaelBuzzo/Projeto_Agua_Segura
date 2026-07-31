@@ -1,3 +1,20 @@
 from django.contrib import admin
 
-# Register your models here.
+from django.contrib import admin
+from .models import Aldeia
+
+
+@admin.register(Aldeia)
+class AldeiaAdmin(admin.ModelAdmin):
+    list_display = (
+        'nome',
+        'municipio',
+        'etnia',
+        'populacao',
+    )
+
+    search_fields = (
+        'nome',
+        'municipio',
+        'etnia',
+    )

@@ -2,8 +2,51 @@
 
 {% block content %}
 
-<h2>Cadastro de Aldeias</h2>
+<div class="pagina-cabecalho">
 
-<p>Em desenvolvimento...</p>
+    <div>
+        <h2>Cadastro de Aldeias</h2>
+        <p>Comunidades cadastradas no Água Segura.</p>
+    </div>
+
+    <a href="{% url 'nova_aldeia' %}" class="btn-principal">
+        + Nova Aldeia
+    </a>
+
+</div>
+
+
+<section class="lista-aldeias">
+
+    {% for aldeia in aldeias %}
+
+        <div class="card-aldeia">
+
+            <h3>{{ aldeia.nome }}</h3>
+
+            <p>
+                <strong>Município:</strong>
+                {{ aldeia.municipio }}
+            </p>
+
+            <p>
+                <strong>População:</strong>
+                {{ aldeia.populacao }}
+            </p>
+
+            <p>
+                <strong>Etnia:</strong>
+                {{ aldeia.get_etnia_display }}
+            </p>
+
+        </div>
+
+    {% empty %}
+
+        <p>Nenhuma aldeia cadastrada.</p>
+
+    {% endfor %}
+
+</section>
 
 {% endblock %}

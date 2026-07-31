@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Nova Aldeia</h2>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <div class="form-grid">
+
+    <div class="form-group">
+        {{ form.nome.label_tag }}
+        {{ form.nome }}
+        {{ form.nome.errors }}
+    </div>
+
+    <div class="form-group">
+        {{ form.municipio.label_tag }}
+        {{ form.municipio }}
+        {{ form.municipio.errors }}
+    </div>
+
+    <div class="form-group">
+        {{ form.populacao.label_tag }}
+        {{ form.populacao }}
+        {{ form.populacao.errors }}
+    </div>
+
+    <div class="form-group">
+        {{ form.etnia.label_tag }}
+        {{ form.etnia }}
+        {{ form.etnia.errors }}
+    </div>
+
+    <div class="form-group">
+        {{ form.quantidade_reservatorios.label_tag }}
+        {{ form.quantidade_reservatorios }}
+        {{ form.quantidade_reservatorios.errors }}
+    </div>
+
+    <div class="form-group">
+        {{ form.capacidade_total.label_tag }}
+        {{ form.capacidade_total }}
+        {{ form.capacidade_total.errors }}
+    </div>
+
+</div>
+
+
+<div class="form-check">
+
+    {{ form.possui_energia }}
+
+    {{ form.possui_energia.label_tag }}
+
+</div>
+
+
+<div class="form-check">
+
+    {{ form.possui_espaco_ubsi }}
+
+    {{ form.possui_espaco_ubsi.label_tag }}
+
+</div>
+
+
+<div class="form-group">
+
+    {{ form.observacoes.label_tag }}
+
+    {{ form.observacoes }}
+
+    {{ form.observacoes.errors }}
+
+</div>
+
+    <button type="submit" class="btn-principal">
+        Salvar Aldeia
+    </button>
+
+</form>
+
+{% endblock %}
